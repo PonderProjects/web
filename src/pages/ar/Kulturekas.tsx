@@ -7,9 +7,9 @@ const buildings = [
   {
     name: "Liepājas muzeja ēka",
     nameEn: "Liepāja Museum Building",
-    location: "Jāņa Čakstes laukums, Alejas parks",
+    location: "Jāņa Čakstes Square, Alejas Park",
     description:
-      "Atklāta 1924. gada 30. novembrī, ēka kalpoja kā kultūras centrs, kurā mājoja vairākas kultūras biedrības un iestādes, kas bija centrālas Liepājas pilsoniskajai dzīvei.",
+      "Opened on November 30, 1924, the building served as a cultural hub housing multiple cultural societies and institutions that were central to the civic life of Liepāja.",
     image3d: "/web/images/kulturekas/muzejs_3d.webp",
     imageHistoric: "/web/images/kulturekas/muzejs_historic.webp",
     mapImage: "/web/images/kulturekas/muzejs_map.webp",
@@ -22,7 +22,7 @@ const buildings = [
     nameEn: "German Theatre",
     location: "Liepāja city center",
     description:
-      "Oficiāli atklāts 1804. gada 15. aprīlī, nojaukts 1924. gadā. Teātris bija celts no koka ar 350 sēdvietām un tika veidots ar Krievijas impērijas arhitektūras ietekmēm. \"Pat mazā teātrī var pastāvēt liela māksla.\"",
+      "Officially opened on April 15, 1804 and demolished in 1924. The theatre was built from wood with 350 seats and constructed with Russian imperial architectural influences. \"Even in a small theatre, great art can exist.\"",
     image3d: "/web/images/kulturekas/teatris_3d.webp",
     imageHistoric: "/web/images/kulturekas/teatris_historic.webp",
     mapImage: "/web/images/kulturekas/teatris_map.webp",
@@ -33,9 +33,10 @@ const buildings = [
   {
     name: "Liepājas Lielā Horālā sinagoga",
     nameEn: "Great Choral Synagogue",
-    location: "Pētera iela 13 (tagad Kuršu 11/13)",
+    location: "Pētera Street 13 (now Kuršu 11/13)",
     description:
-      "Celta 1870.–1873. gadā neorenesanses stilā. Šī majestātiskā sinagoga tika iznīcināta vācu okupācijas spēku rokās 1941. gada jūlijā. Aplikācija saglabā tās atmiņu nākamajām paaudzēm.",
+      "Built between 1870 and 1873 in neo-renaissance style. This magnificent synagogue was destroyed by German occupation forces in July 1941. The app preserves its memory for future generations.",
+    portrait: true,
     image3d: "/web/images/kulturekas/sinagoga_3d.webp",
     imageHistoric: "/web/images/kulturekas/sinagoga_historic.webp",
     mapImage: "/web/images/kulturekas/sinagoga_map.webp",
@@ -173,7 +174,7 @@ const Kulturekas = () => {
                   <img
                     src={building.image3d}
                     alt={`${building.name} — 3D reconstruction`}
-                    className="w-full h-64 object-cover"
+                    className={`w-full object-contain ${building.portrait ? "bg-black/20" : "h-64 object-cover"}`}
                   />
                   <p className="text-xs text-muted-foreground px-4 py-2">3D Reconstruction</p>
                 </div>
@@ -181,7 +182,7 @@ const Kulturekas = () => {
                   <img
                     src={building.imageHistoric}
                     alt={`${building.name} — historic photograph`}
-                    className="w-full h-64 object-cover"
+                    className={`w-full object-contain ${building.portrait ? "bg-black/20" : "h-64 object-cover"}`}
                   />
                   <p className="text-xs text-muted-foreground px-4 py-2">Historic Photograph</p>
                 </div>
