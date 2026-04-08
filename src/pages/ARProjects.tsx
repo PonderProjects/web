@@ -1,12 +1,15 @@
 import Layout from "@/components/layout/Layout";
-import { Glasses } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Glasses, ExternalLink } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const arProjects = [
   {
-    title: "AR Project 1",
+    title: "3D kultūrēkas",
     category: "Augmented Reality",
-    description: "Temporary placeholder for AR project 1. More details coming soon.",
-    tags: ["Unity", "ARKit", "ARCore"],
+    description: "An AR mobile app that brings back three historic Liepāja buildings lost to history — letting you see them in real life again through your device's camera.",
+    tags: ["Unity", "ARKit", "ARCore", "iOS", "Android"],
+    detailPage: "/ar-projects/kulturekas",
   },
   {
     title: "AR Project 2",
@@ -23,6 +26,8 @@ const arProjects = [
 ];
 
 const ARProjects = () => {
+  const navigate = useNavigate();
+
   return (
     <Layout>
       {/* Hero Section */}
@@ -70,9 +75,9 @@ const ARProjects = () => {
                   </p>
                 </div>
 
-                {/* Tags */}
+                {/* Tags & Action */}
                 <div className="px-6 pb-6">
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags.map((tag, tagIdx) => (
                       <span
                         key={tagIdx}
@@ -82,6 +87,17 @@ const ARProjects = () => {
                       </span>
                     ))}
                   </div>
+                  {project.detailPage && (
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      className="group/btn p-0 h-auto text-muted-foreground hover:text-primary"
+                      onClick={() => navigate(project.detailPage!)}
+                    >
+                      About project
+                      <ExternalLink className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                    </Button>
+                  )}
                 </div>
               </div>
             ))}
