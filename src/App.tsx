@@ -8,6 +8,8 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import ARProjects from "./pages/ARProjects";
 import Conferences from "./pages/Conferences";
+import AITraining from "./pages/AITraining";
+import AISolutions from "./pages/AISolutions";
 
 const App = () => (
   <TooltipProvider>
@@ -20,6 +22,8 @@ const App = () => (
         <Route path="/contact" element={<Contact />} />
         <Route path="/ar-projects" element={<ARProjects />} />
         <Route path="/conferences" element={<Conferences />} />
+        <Route path="/ai-training" element={<AITraining />} />
+        <Route path="/ai-solutions" element={<AISolutions />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

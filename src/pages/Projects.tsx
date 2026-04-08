@@ -1,6 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Brain, Glasses, BarChart3, Bot, Layers, Workflow } from "lucide-react";
+import { ExternalLink, Brain, Glasses, BarChart3, Bot, Layers } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const projects = [
@@ -21,32 +21,28 @@ const projects = [
     arPage: true,
   },
   {
-    title: "AI Customer Service Bot",
-    category: "Natural Language Processing",
-    description: "Created an intelligent chatbot that handles customer inquiries with 95% accuracy, reducing support tickets by 60%.",
+    title: "AI Training",
+    category: "Education",
+    description: "We offer live AI training sessions for teams and individuals — hands-on workshops covering machine learning, generative AI, and practical implementation strategies.",
     icon: Bot,
-    tags: ["GPT-4", "Node.js", "React"],
+    tags: ["AI", "Generative AI", "Workshops", "Machine Learning"],
+    aiTrainingPage: true,
   },
   {
-    title: "Computer Vision Quality Control",
-    category: "Machine Learning",
-    description: "Implemented real-time defect detection system for a manufacturing line, improving quality control efficiency by 80%.",
+    title: "AI Solutions",
+    category: "AI & Consulting",
+    description: "We offer a wide range of AI solutions tailored to your business — from custom model development and data pipelines to AI strategy and integration consulting.",
     icon: Brain,
-    tags: ["PyTorch", "OpenCV", "Docker"],
+    tags: ["AI", "Consulting", "Custom Models", "Data Pipelines"],
+    aiSolutionsPage: true,
   },
   {
-    title: "VR Product Configurator",
-    category: "Virtual Reality",
-    description: "Built a virtual reality experience allowing customers to customize and visualize products in 3D before purchase.",
+    title: "IT Waffle Meetup",
+    category: "Community Event",
+    description: "We organize IT Waffle Meetup — a popular IT networking event bringing together tech professionals, developers, and innovators for knowledge sharing and community building.",
     icon: Layers,
-    tags: ["Unreal Engine", "VR", "3D"],
-  },
-  {
-    title: "ML Pipeline Automation",
-    category: "MLOps",
-    description: "Designed and implemented automated ML pipelines for continuous model training, testing, and deployment.",
-    icon: Workflow,
-    tags: ["Kubernetes", "MLflow", "Airflow"],
+    tags: ["Networking", "Community", "IT Events"],
+    externalUrl: "https://itwafflemeetup.lv/?lang=en",
   },
 ];
 
@@ -132,6 +128,33 @@ const Projects = () => {
                       View conferences
                       <ExternalLink className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                     </Button>
+                  ) : project.aiTrainingPage ? (
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      className="group/btn p-0 h-auto text-muted-foreground hover:text-primary"
+                      onClick={() => navigate("/ai-training")}
+                    >
+                      View AI training
+                      <ExternalLink className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                    </Button>
+                  ) : project.aiSolutionsPage ? (
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      className="group/btn p-0 h-auto text-muted-foreground hover:text-primary"
+                      onClick={() => navigate("/ai-solutions")}
+                    >
+                      Our solutions
+                      <ExternalLink className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                    </Button>
+                  ) : project.externalUrl ? (
+                    <a href={project.externalUrl} target="_blank" rel="noopener noreferrer">
+                      <Button variant="ghost" size="sm" className="group/btn p-0 h-auto text-muted-foreground hover:text-primary">
+                        View website
+                        <ExternalLink className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                      </Button>
+                    </a>
                   ) : (
                     <Button variant="ghost" size="sm" className="group/btn p-0 h-auto text-muted-foreground hover:text-primary">
                       View Case Study
