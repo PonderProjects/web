@@ -1,21 +1,24 @@
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Brain, Glasses, BarChart3, Bot, Layers, Workflow } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const projects = [
   {
-    title: "Predictive Analytics Platform",
-    category: "Machine Learning",
-    description: "Built a comprehensive ML platform for a retail company to predict inventory needs and optimize supply chain operations.",
+    title: "Conferences",
+    category: "Public Speaking",
+    description: "We offer expert speaking engagements at conferences worldwide, sharing insights on AI, machine learning, and augmented reality innovations.",
     icon: BarChart3,
-    tags: ["Python", "TensorFlow", "AWS"],
+    tags: ["AI", "Machine Learning", "AR", "Public Speaking"],
+    conferencesPage: true,
   },
   {
-    title: "AR Training Simulator",
+    title: "AR Projects",
     category: "Augmented Reality",
-    description: "Developed an immersive AR training application for manufacturing workers to practice complex procedures safely.",
+    description: "We are building cutting-edge augmented reality projects that blend the digital and physical worlds — from industrial training to interactive experiences.",
     icon: Glasses,
-    tags: ["Unity", "ARKit", "C#"],
+    tags: ["Unity", "ARKit", "ARCore"],
+    arPage: true,
   },
   {
     title: "AI Customer Service Bot",
@@ -48,6 +51,8 @@ const projects = [
 ];
 
 const Projects = () => {
+  const navigate = useNavigate();
+
   return (
     <Layout>
       {/* Hero Section */}
@@ -107,10 +112,32 @@ const Projects = () => {
                       </span>
                     ))}
                   </div>
-                  <Button variant="ghost" size="sm" className="group/btn p-0 h-auto text-muted-foreground hover:text-primary">
-                    View Case Study
-                    <ExternalLink className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-                  </Button>
+                  {project.arPage ? (
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      className="group/btn p-0 h-auto text-muted-foreground hover:text-primary"
+                      onClick={() => navigate("/ar-projects")}
+                    >
+                      Check our projects
+                      <ExternalLink className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                    </Button>
+                  ) : project.conferencesPage ? (
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      className="group/btn p-0 h-auto text-muted-foreground hover:text-primary"
+                      onClick={() => navigate("/conferences")}
+                    >
+                      View conferences
+                      <ExternalLink className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                    </Button>
+                  ) : (
+                    <Button variant="ghost" size="sm" className="group/btn p-0 h-auto text-muted-foreground hover:text-primary">
+                      View Case Study
+                      <ExternalLink className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                    </Button>
+                  )}
                 </div>
               </div>
             ))}
