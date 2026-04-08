@@ -10,12 +10,12 @@ const buildings = [
     location: "Jāņa Čakstes laukums, Alejas parks",
     description:
       "Atklāta 1924. gada 30. novembrī, ēka kalpoja kā kultūras centrs, kurā mājoja vairākas kultūras biedrības un iestādes, kas bija centrālas Liepājas pilsoniskajai dzīvei.",
-    image3d: "https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63ab0d69d827c5033f301f55_Muzejs.webp",
-    imageHistoric: "https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63ac2a66268d182ea3677a77_Muzejs.webp",
-    mapImage: "https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63ab131ce93ff85a8a962929_Muzejs.webp",
-    arScreenshot1: "https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63aad6c4fdf77f50cb660fd2_muzejs_01.webp",
-    arScreenshot2: "https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63aad6c5ddf22719ed59eb3c_muzejs_02.webp",
-    mapWithMarks: "https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63aad6c4ddf22704c259eb2c_mapTempMuzejsWithMarks.webp",
+    image3d: "/images/kulturekas/muzejs_3d.webp",
+    imageHistoric: "/images/kulturekas/muzejs_historic.webp",
+    mapImage: "/images/kulturekas/muzejs_map.webp",
+    arScreenshot1: "/images/kulturekas/muzejs_ar1.webp",
+    arScreenshot2: "/images/kulturekas/muzejs_ar2.webp",
+    mapWithMarks: "/images/kulturekas/muzejs_map_marks.webp",
   },
   {
     name: "Liepājas Vācu teātris",
@@ -23,12 +23,12 @@ const buildings = [
     location: "Liepāja city center",
     description:
       "Oficiāli atklāts 1804. gada 15. aprīlī, nojaukts 1924. gadā. Teātris bija celts no koka ar 350 sēdvietām un tika veidots ar Krievijas impērijas arhitektūras ietekmēm. \"Pat mazā teātrī var pastāvēt liela māksla.\"",
-    image3d: "https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63ab0d6908d098b986215297_Teatris.webp",
-    imageHistoric: "https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63b2c4777146bd0b587d551c_Liep%CC%84jas%20Va%CC%84cu%20tea%CC%84tris.webp",
-    mapImage: "https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63ab131c268d18bad3536472_Teatris.webp",
-    arScreenshot1: "https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63aad6c5c90d9716cedabbb3_teatris_01.webp",
-    arScreenshot2: "https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63aad6c5fdf77f1c37660fe9_teatris_02.webp",
-    mapWithMarks: "https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63aad6c46059e54e33c05368_mapTempTeatrisWithMarks.webp",
+    image3d: "/images/kulturekas/teatris_3d.webp",
+    imageHistoric: "/images/kulturekas/teatris_historic.webp",
+    mapImage: "/images/kulturekas/teatris_map.webp",
+    arScreenshot1: "/images/kulturekas/teatris_ar1.webp",
+    arScreenshot2: "/images/kulturekas/teatris_ar2.webp",
+    mapWithMarks: "/images/kulturekas/teatris_map_marks.webp",
   },
   {
     name: "Liepājas Lielā Horālā sinagoga",
@@ -36,12 +36,12 @@ const buildings = [
     location: "Pētera iela 13 (tagad Kuršu 11/13)",
     description:
       "Celta 1870.–1873. gadā neorenesanses stilā. Šī majestātiskā sinagoga tika iznīcināta vācu okupācijas spēku rokās 1941. gada jūlijā. Aplikācija saglabā tās atmiņu nākamajām paaudzēm.",
-    image3d: "https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63ab0d68da54a262abe57ff8_Sinogoga.webp",
-    imageHistoric: "https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63ae9c3d493ff7f0d15ade9a_Sinagoga1.webp",
-    mapImage: "https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63ab131c5f0e599e75de6d9d_Sinagoga.webp",
-    arScreenshot1: "https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63aad6c527ff6daa2fc3b5bb_sinagoga_01.webp",
-    arScreenshot2: "https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63aad6c4aba7a8406682d912_sinagoga_02.webp",
-    mapWithMarks: "https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63aad6c4fdf77f4a7c660fd4_mapTempSinagogaWithMarks.webp",
+    image3d: "/images/kulturekas/sinagoga_3d.webp",
+    imageHistoric: "/images/kulturekas/sinagoga_historic.webp",
+    mapImage: "/images/kulturekas/sinagoga_map.webp",
+    arScreenshot1: "/images/kulturekas/sinagoga_ar1.webp",
+    arScreenshot2: "/images/kulturekas/sinagoga_ar2.webp",
+    mapWithMarks: "/images/kulturekas/sinagoga_map_marks.webp",
   },
 ];
 
@@ -50,19 +50,19 @@ const team = [
     name: "Jānis Jaunsleinis",
     role: "3D Architecture Designer",
     bio: "Contributed 3D modeling for Riga Technical University renovation projects and created energy efficiency visualizations. Researched pre-war Liepāja photographs and historical archives to faithfully reconstruct each building.",
-    image: "https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/62e55dec4512d663b6c6292d_60e6c9a6b5e67e031fe1616e.jpg",
+    image: "/images/kulturekas/team_janis.jpg",
   },
   {
     name: "Kaspars Lēvalds",
     role: "Multimedia Artist & VR/AR Specialist",
     bio: "Graduate of the University of Liepāja's New Media Art program. Award-winning VR/AR developer with first and second-place finishes at AR/VR Hackathon 2018 and RIGA IFF GOES VR 2019.",
-    image: "https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/60e6c9a6b5e67e32e0e1617e_Kaspars_Levalds.jpeg",
+    image: "/images/kulturekas/team_kaspars.jpeg",
   },
   {
     name: "Arturs Vītiņš",
     role: "Programmer & AR Solutions Developer",
     bio: "Former building construction engineer at SIA \"AILE grupa\". Developed the iOS and Android application in Unity and built all augmented reality solutions powering the experience.",
-    image: "https://cdn.prod.website-files.com/60e6c9a6b5e67efc93e16178_Arturs_Vitins.jpeg",
+    image: "/images/kulturekas/team_arturs.jpeg",
   },
 ];
 
@@ -139,7 +139,7 @@ const Kulturekas = () => {
             </p>
             <div className="rounded-xl overflow-hidden border border-white/10">
               <img
-                src="https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63ab131c5f0e59720fde6d9c_%203Points.webp"
+                src="/images/kulturekas/all_points.webp"
                 alt="Map of all three building locations in Liepāja"
                 className="w-full object-cover"
               />
@@ -249,7 +249,7 @@ const Kulturekas = () => {
                   </p>
                   <div className="rounded-lg overflow-hidden border border-white/10">
                     <img
-                      src="https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63ab131c5f0e59720fde6d9c_%203Points.webp"
+                      src="/images/kulturekas/all_points.webp"
                       alt="GPS location mode — building site locations"
                       className="w-full object-cover"
                     />
@@ -274,7 +274,7 @@ const Kulturekas = () => {
                   </p>
                   <div className="rounded-lg overflow-hidden border border-white/10">
                     <img
-                      src="https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63ae9d5f33698b5c30eaa759_Telpa.webp"
+                      src="/images/kulturekas/virtual_space.webp"
                       alt="Virtual space mode"
                       className="w-full object-cover"
                     />
@@ -299,7 +299,7 @@ const Kulturekas = () => {
                   </p>
                   <div className="rounded-lg overflow-hidden border border-white/10">
                     <img
-                      src="https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63ae9e5af706a1a0b8e4a4c4_Attels.webp"
+                      src="/images/kulturekas/image_marker.webp"
                       alt="Image marker recognition mode"
                       className="w-full object-cover"
                     />
