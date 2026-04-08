@@ -10,12 +10,12 @@ const buildings = [
     location: "Jāņa Čakstes laukums, Alejas parks",
     description:
       "Atklāta 1924. gada 30. novembrī, ēka kalpoja kā kultūras centrs, kurā mājoja vairākas kultūras biedrības un iestādes, kas bija centrālas Liepājas pilsoniskajai dzīvei.",
-    image3d: "/images/kulturekas/muzejs_3d.webp",
-    imageHistoric: "/images/kulturekas/muzejs_historic.webp",
-    mapImage: "/images/kulturekas/muzejs_map.webp",
-    arScreenshot1: "/images/kulturekas/muzejs_ar1.webp",
-    arScreenshot2: "/images/kulturekas/muzejs_ar2.webp",
-    mapWithMarks: "/images/kulturekas/muzejs_map_marks.webp",
+    image3d: "/web/images/kulturekas/muzejs_3d.webp",
+    imageHistoric: "/web/images/kulturekas/muzejs_historic.webp",
+    mapImage: "/web/images/kulturekas/muzejs_map.webp",
+    arScreenshot1: "/web/images/kulturekas/muzejs_ar1.webp",
+    arScreenshot2: "/web/images/kulturekas/muzejs_ar2.webp",
+    mapWithMarks: "/web/images/kulturekas/muzejs_map_marks.webp",
   },
   {
     name: "Liepājas Vācu teātris",
@@ -23,12 +23,12 @@ const buildings = [
     location: "Liepāja city center",
     description:
       "Oficiāli atklāts 1804. gada 15. aprīlī, nojaukts 1924. gadā. Teātris bija celts no koka ar 350 sēdvietām un tika veidots ar Krievijas impērijas arhitektūras ietekmēm. \"Pat mazā teātrī var pastāvēt liela māksla.\"",
-    image3d: "/images/kulturekas/teatris_3d.webp",
-    imageHistoric: "/images/kulturekas/teatris_historic.webp",
-    mapImage: "/images/kulturekas/teatris_map.webp",
-    arScreenshot1: "/images/kulturekas/teatris_ar1.webp",
-    arScreenshot2: "/images/kulturekas/teatris_ar2.webp",
-    mapWithMarks: "/images/kulturekas/teatris_map_marks.webp",
+    image3d: "/web/images/kulturekas/teatris_3d.webp",
+    imageHistoric: "/web/images/kulturekas/teatris_historic.webp",
+    mapImage: "/web/images/kulturekas/teatris_map.webp",
+    arScreenshot1: "/web/images/kulturekas/teatris_ar1.webp",
+    arScreenshot2: "/web/images/kulturekas/teatris_ar2.webp",
+    mapWithMarks: "/web/images/kulturekas/teatris_map_marks.webp",
   },
   {
     name: "Liepājas Lielā Horālā sinagoga",
@@ -36,12 +36,12 @@ const buildings = [
     location: "Pētera iela 13 (tagad Kuršu 11/13)",
     description:
       "Celta 1870.–1873. gadā neorenesanses stilā. Šī majestātiskā sinagoga tika iznīcināta vācu okupācijas spēku rokās 1941. gada jūlijā. Aplikācija saglabā tās atmiņu nākamajām paaudzēm.",
-    image3d: "/images/kulturekas/sinagoga_3d.webp",
-    imageHistoric: "/images/kulturekas/sinagoga_historic.webp",
-    mapImage: "/images/kulturekas/sinagoga_map.webp",
-    arScreenshot1: "/images/kulturekas/sinagoga_ar1.webp",
-    arScreenshot2: "/images/kulturekas/sinagoga_ar2.webp",
-    mapWithMarks: "/images/kulturekas/sinagoga_map_marks.webp",
+    image3d: "/web/images/kulturekas/sinagoga_3d.webp",
+    imageHistoric: "/web/images/kulturekas/sinagoga_historic.webp",
+    mapImage: "/web/images/kulturekas/sinagoga_map.webp",
+    arScreenshot1: "/web/images/kulturekas/sinagoga_ar1.webp",
+    arScreenshot2: "/web/images/kulturekas/sinagoga_ar2.webp",
+    mapWithMarks: "/web/images/kulturekas/sinagoga_map_marks.webp",
   },
 ];
 
@@ -50,19 +50,19 @@ const team = [
     name: "Jānis Jaunsleinis",
     role: "3D Architecture Designer",
     bio: "Contributed 3D modeling for Riga Technical University renovation projects and created energy efficiency visualizations. Researched pre-war Liepāja photographs and historical archives to faithfully reconstruct each building.",
-    image: "/images/kulturekas/team_janis.jpg",
+    image: "/web/images/kulturekas/team_janis.jpg",
   },
   {
     name: "Kaspars Lēvalds",
     role: "Multimedia Artist & VR/AR Specialist",
     bio: "Graduate of the University of Liepāja's New Media Art program. Award-winning VR/AR developer with first and second-place finishes at AR/VR Hackathon 2018 and RIGA IFF GOES VR 2019.",
-    image: "/images/kulturekas/team_kaspars.jpeg",
+    image: "/web/images/kulturekas/team_kaspars.jpeg",
   },
   {
     name: "Arturs Vītiņš",
     role: "Programmer & AR Solutions Developer",
     bio: "Former building construction engineer at SIA \"AILE grupa\". Developed the iOS and Android application in Unity and built all augmented reality solutions powering the experience.",
-    image: "/images/kulturekas/team_arturs.jpeg",
+    image: "/web/images/kulturekas/team_arturs.jpeg",
   },
 ];
 
@@ -139,7 +139,7 @@ const Kulturekas = () => {
             </p>
             <div className="rounded-xl overflow-hidden border border-white/10">
               <img
-                src="/images/kulturekas/all_points.webp"
+                src="/web/images/kulturekas/all_points.webp"
                 alt="Map of all three building locations in Liepāja"
                 className="w-full object-cover"
               />
@@ -249,7 +249,7 @@ const Kulturekas = () => {
                   </p>
                   <div className="rounded-lg overflow-hidden border border-white/10">
                     <img
-                      src="/images/kulturekas/all_points.webp"
+                      src="/web/images/kulturekas/all_points.webp"
                       alt="GPS location mode — building site locations"
                       className="w-full object-cover"
                     />
@@ -274,7 +274,7 @@ const Kulturekas = () => {
                   </p>
                   <div className="rounded-lg overflow-hidden border border-white/10">
                     <img
-                      src="/images/kulturekas/virtual_space.webp"
+                      src="/web/images/kulturekas/virtual_space.webp"
                       alt="Virtual space mode"
                       className="w-full object-cover"
                     />
@@ -299,7 +299,7 @@ const Kulturekas = () => {
                   </p>
                   <div className="rounded-lg overflow-hidden border border-white/10">
                     <img
-                      src="/images/kulturekas/image_marker.webp"
+                      src="/web/images/kulturekas/image_marker.webp"
                       alt="Image marker recognition mode"
                       className="w-full object-cover"
                     />
