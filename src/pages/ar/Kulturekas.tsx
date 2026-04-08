@@ -1,44 +1,68 @@
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import { ArrowLeft, Smartphone, MapPin, Layers, Image } from "lucide-react";
+import { ArrowLeft, MapPin, Smartphone } from "lucide-react";
 
 const buildings = [
   {
-    name: "Liepāja Museum Building",
-    location: "Alejas Park",
+    name: "Liepājas muzeja ēka",
+    nameEn: "Liepāja Museum Building",
+    location: "Jāņa Čakstes laukums, Alejas parks",
     description:
-      "Opened on November 30, 1924, this building served as a cultural hub housing multiple cultural societies and institutions central to Liepāja's civic life.",
+      "Atklāta 1924. gada 30. novembrī, ēka kalpoja kā kultūras centrs, kurā mājoja vairākas kultūras biedrības un iestādes, kas bija centrālas Liepājas pilsoniskajai dzīvei.",
+    image3d: "https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63ab0d69d827c5033f301f55_Muzejs.webp",
+    imageHistoric: "https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63ac2a66268d182ea3677a77_Muzejs.webp",
+    mapImage: "https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63ab131ce93ff85a8a962929_Muzejs.webp",
+    arScreenshot1: "https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63aad6c4fdf77f50cb660fd2_muzejs_01.webp",
+    arScreenshot2: "https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63aad6c5ddf22719ed59eb3c_muzejs_02.webp",
+    mapWithMarks: "https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63aad6c4ddf22704c259eb2c_mapTempMuzejsWithMarks.webp",
   },
   {
-    name: "German Theatre",
+    name: "Liepājas Vācu teātris",
+    nameEn: "German Theatre",
     location: "Liepāja city center",
     description:
-      "Inaugurated on April 15, 1804 and demolished in 1924. The theatre featured 350 seats and was built with Russian imperial architectural influences, representing a defining era of the city's cultural scene.",
+      "Oficiāli atklāts 1804. gada 15. aprīlī, nojaukts 1924. gadā. Teātris bija celts no koka ar 350 sēdvietām un tika veidots ar Krievijas impērijas arhitektūras ietekmēm. \"Pat mazā teātrī var pastāvēt liela māksla.\"",
+    image3d: "https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63ab0d6908d098b986215297_Teatris.webp",
+    imageHistoric: "https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63b2c4777146bd0b587d551c_Liep%CC%84jas%20Va%CC%84cu%20tea%CC%84tris.webp",
+    mapImage: "https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63ab131c268d18bad3536472_Teatris.webp",
+    arScreenshot1: "https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63aad6c5c90d9716cedabbb3_teatris_01.webp",
+    arScreenshot2: "https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63aad6c5fdf77f1c37660fe9_teatris_02.webp",
+    mapWithMarks: "https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63aad6c46059e54e33c05368_mapTempTeatrisWithMarks.webp",
   },
   {
-    name: "Great Choral Synagogue",
-    location: "Liepāja",
+    name: "Liepājas Lielā Horālā sinagoga",
+    nameEn: "Great Choral Synagogue",
+    location: "Pētera iela 13 (tagad Kuršu 11/13)",
     description:
-      "Built between 1870 and 1873 in neorenaissance style, this magnificent synagogue was destroyed by German occupation forces in July 1941. The app preserves its memory for future generations.",
+      "Celta 1870.–1873. gadā neorenesanses stilā. Šī majestātiskā sinagoga tika iznīcināta vācu okupācijas spēku rokās 1941. gada jūlijā. Aplikācija saglabā tās atmiņu nākamajām paaudzēm.",
+    image3d: "https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63ab0d68da54a262abe57ff8_Sinogoga.webp",
+    imageHistoric: "https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63ae9c3d493ff7f0d15ade9a_Sinagoga1.webp",
+    mapImage: "https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63ab131c5f0e599e75de6d9d_Sinagoga.webp",
+    arScreenshot1: "https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63aad6c527ff6daa2fc3b5bb_sinagoga_01.webp",
+    arScreenshot2: "https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63aad6c4aba7a8406682d912_sinagoga_02.webp",
+    mapWithMarks: "https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63aad6c4fdf77f4a7c660fd4_mapTempSinagogaWithMarks.webp",
   },
 ];
 
-const viewingModes = [
+const team = [
   {
-    icon: MapPin,
-    title: "Location-Based AR",
-    description: "Stand within 30 meters of the original building site and see the structure rise in front of you through your camera.",
+    name: "Jānis Jaunsleinis",
+    role: "3D Architecture Designer",
+    bio: "Contributed 3D modeling for Riga Technical University renovation projects and created energy efficiency visualizations. Researched pre-war Liepāja photographs and historical archives to faithfully reconstruct each building.",
+    image: "https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/62e55dec4512d663b6c6292d_60e6c9a6b5e67e031fe1616e.jpg",
   },
   {
-    icon: Layers,
-    title: "Virtual Space",
-    description: "Place the reconstructed building anywhere in your environment without needing to visit the original location.",
+    name: "Kaspars Lēvalds",
+    role: "Multimedia Artist & VR/AR Specialist",
+    bio: "Graduate of the University of Liepāja's New Media Art program. Award-winning VR/AR developer with first and second-place finishes at AR/VR Hackathon 2018 and RIGA IFF GOES VR 2019.",
+    image: "https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/60e6c9a6b5e67e32e0e1617e_Kaspars_Levalds.jpeg",
   },
   {
-    icon: Image,
-    title: "Marker Tracking",
-    description: "Point your camera at an image marker to instantly trigger the AR reconstruction.",
+    name: "Arturs Vītiņš",
+    role: "Programmer & AR Solutions Developer",
+    bio: "Former building construction engineer at SIA \"AILE grupa\". Developed the iOS and Android application in Unity and built all augmented reality solutions powering the experience.",
+    image: "https://cdn.prod.website-files.com/60e6c9a6b5e67efc93e16178_Arturs_Vitins.jpeg",
   },
 ];
 
@@ -47,10 +71,9 @@ const Kulturekas = () => {
 
   return (
     <Layout>
-      {/* Hero Section */}
+      {/* Hero */}
       <section className="pt-24 pb-16 relative">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_hsl(192_95%_55%_/_0.1)_0%,_transparent_50%)]" />
-
         <div className="container mx-auto px-4 relative z-10">
           <Button
             variant="ghost"
@@ -63,131 +86,315 @@ const Kulturekas = () => {
           </Button>
 
           <div className="max-w-3xl mx-auto text-center">
-            <span className="text-primary text-sm font-medium uppercase tracking-wider">Augmented Reality</span>
+            <span className="text-primary text-sm font-medium uppercase tracking-wider">Augmented Reality · Liepāja</span>
             <h1 className="text-4xl md:text-5xl font-bold mt-3 mb-6">
               3D <span className="text-gradient">kultūrēkas</span>
             </h1>
-            <p className="text-muted-foreground text-lg leading-relaxed">
-              An augmented reality mobile app that brings back three historic Liepāja buildings lost to history —
-              letting residents and visitors see them in real life again through their device's camera.
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              Augmented reality mobile application that brings back three historic Liepāja buildings lost to history —
+              letting residents and visitors see them standing in real life again through their device's camera.
             </p>
-            <div className="flex items-center justify-center gap-3 mt-6">
-              <span className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary">Unity</span>
-              <span className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary">ARKit</span>
-              <span className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary">ARCore</span>
-              <span className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary">iOS</span>
-              <span className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary">Android</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* About Section */}
-      <section className="pb-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6">
-              About the <span className="text-gradient">Project</span>
-            </h2>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              Liepāja's architectural heritage carries stories of a vibrant cultural past — yet several of its most iconic buildings no longer exist. <strong className="text-foreground">3D kultūrēkas</strong> uses augmented reality to reconstruct three of these lost landmarks, allowing anyone with a smartphone to see them standing as they once did.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              The project promotes digital literacy, civic pride, and the preservation of architectural knowledge through modern technology — making history accessible and interactive for a new generation.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Viewing Modes */}
-      <section className="pb-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold mb-8">
-              How It <span className="text-gradient">Works</span>
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {viewingModes.map((mode, idx) => (
-                <div key={idx} className="glass-card p-6 hover-lift group">
-                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mb-4 group-hover:from-primary/30 group-hover:to-accent/30 transition-all duration-300">
-                    <mode.icon className="w-5 h-5 text-primary" />
-                  </div>
-                  <h3 className="font-semibold text-foreground mb-2">{mode.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{mode.description}</p>
-                </div>
+            <div className="flex flex-wrap items-center justify-center gap-2 mb-8">
+              {["Unity", "ARKit", "ARCore", "iOS", "Android"].map((tag) => (
+                <span key={tag} className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary">{tag}</span>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Buildings Section */}
-      <section className="pb-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold mb-8">
-              Featured <span className="text-gradient">Buildings</span>
-            </h2>
-            <div className="flex flex-col gap-6">
-              {buildings.map((building, idx) => (
-                <div key={idx} className="glass-card p-6 hover-lift group">
-                  <div className="flex items-start gap-4">
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center shrink-0 mt-1 group-hover:from-primary/30 group-hover:to-accent/30 transition-all duration-300">
-                      <span className="text-primary text-sm font-bold">{idx + 1}</span>
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-1 group-hover:text-primary transition-colors">
-                        {building.name}
-                      </h3>
-                      <div className="flex items-center gap-1 text-xs text-muted-foreground mb-2">
-                        <MapPin className="w-3 h-3" />
-                        {building.location}
-                      </div>
-                      <p className="text-muted-foreground text-sm leading-relaxed">{building.description}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
+            {/* Download Buttons */}
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <a
+                href="https://apps.apple.com/lv/app/3d-kult%C5%ABr%C4%93kas/id6444926399"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="hero" size="lg">
+                  <Smartphone className="w-4 h-4 mr-2" />
+                  Download on App Store
+                </Button>
+              </a>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.ekasliepaja3d.workerlv"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="outline" size="lg">
+                  <Smartphone className="w-4 h-4 mr-2" />
+                  Get it on Google Play
+                </Button>
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Team & Availability */}
+      {/* All 3 locations map overview */}
       <section className="pb-16">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Team */}
-            <div className="glass-card p-6">
-              <h3 className="font-semibold text-foreground mb-4">Development Team</h3>
-              <ul className="flex flex-col gap-3">
-                {[
-                  { name: "Jānis Jaunsleinis", role: "3D Architecture Designer" },
-                  { name: "Kaspars Lēvalds", role: "Multimedia Artist & VR/AR Specialist" },
-                  { name: "Arturs Vītiņš", role: "Programmer & AR Solutions Developer" },
-                ].map((member, idx) => (
-                  <li key={idx}>
-                    <p className="text-foreground text-sm font-medium">{member.name}</p>
-                    <p className="text-muted-foreground text-xs">{member.role}</p>
-                  </li>
-                ))}
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-center">
+              Three Lost <span className="text-gradient">Landmarks</span>
+            </h2>
+            <p className="text-muted-foreground text-center mb-8 max-w-2xl mx-auto">
+              Each building has been faithfully reconstructed in 3D using historical photographs and archival records.
+              Visit their original locations in Liepāja or explore them anywhere through virtual space.
+            </p>
+            <div className="rounded-xl overflow-hidden border border-white/10">
+              <img
+                src="https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63ab131c5f0e59720fde6d9c_%203Points.webp"
+                alt="Map of all three building locations in Liepāja"
+                className="w-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Buildings — each with 3D render, historic photo, map, AR screenshots */}
+      {buildings.map((building, idx) => (
+        <section key={idx} className="pb-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              {/* Building header */}
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-7 h-7 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center shrink-0">
+                  <span className="text-primary text-sm font-bold">{idx + 1}</span>
+                </div>
+                <span className="text-primary text-sm font-medium uppercase tracking-wider">{building.nameEn}</span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-2">{building.name}</h2>
+              <div className="flex items-center gap-1 text-xs text-muted-foreground mb-4">
+                <MapPin className="w-3 h-3" />
+                {building.location}
+              </div>
+              <p className="text-muted-foreground leading-relaxed mb-8">{building.description}</p>
+
+              {/* 3D render + historic photo */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                <div className="rounded-xl overflow-hidden border border-white/10">
+                  <img
+                    src={building.image3d}
+                    alt={`${building.name} — 3D reconstruction`}
+                    className="w-full h-64 object-cover"
+                  />
+                  <p className="text-xs text-muted-foreground px-4 py-2">3D Reconstruction</p>
+                </div>
+                <div className="rounded-xl overflow-hidden border border-white/10">
+                  <img
+                    src={building.imageHistoric}
+                    alt={`${building.name} — historic photograph`}
+                    className="w-full h-64 object-cover"
+                  />
+                  <p className="text-xs text-muted-foreground px-4 py-2">Historic Photograph</p>
+                </div>
+              </div>
+
+              {/* Location map */}
+              <div className="rounded-xl overflow-hidden border border-white/10 mb-4">
+                <img
+                  src={building.mapWithMarks}
+                  alt={`${building.name} — location map`}
+                  className="w-full object-cover"
+                />
+                <p className="text-xs text-muted-foreground px-4 py-2">Location map — approach within 30 m to trigger AR</p>
+              </div>
+
+              {/* AR screenshots */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="rounded-xl overflow-hidden border border-white/10">
+                  <img
+                    src={building.arScreenshot1}
+                    alt={`${building.name} — AR view 1`}
+                    className="w-full object-cover"
+                  />
+                  <p className="text-xs text-muted-foreground px-4 py-2">In-app AR view</p>
+                </div>
+                <div className="rounded-xl overflow-hidden border border-white/10">
+                  <img
+                    src={building.arScreenshot2}
+                    alt={`${building.name} — AR view 2`}
+                    className="w-full object-cover"
+                  />
+                  <p className="text-xs text-muted-foreground px-4 py-2">In-app AR view</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      ))}
+
+      {/* How to use */}
+      <section className="pb-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold mb-2 text-center">
+              How to <span className="text-gradient">Use the App</span>
+            </h2>
+            <p className="text-muted-foreground text-center mb-10 max-w-2xl mx-auto">
+              Three different ways to experience the reconstructed buildings — choose what works best for you.
+            </p>
+
+            {/* Mode 1 — Location */}
+            <div className="glass-card p-6 md:p-8 mb-6 hover-lift">
+              <div className="flex flex-col md:flex-row gap-6 items-start">
+                <div className="shrink-0">
+                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                    <MapPin className="w-5 h-5 text-primary" />
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold text-foreground mb-2">1. Physical Location (GPS)</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                    Visit the original location of the building in Liepāja. When you are within <strong className="text-foreground">30 meters</strong> of the site,
+                    the AR experience activates automatically. Point your camera and watch the building rise in front of you.
+                    Best used during daytime with a clear GPS signal.
+                  </p>
+                  <div className="rounded-lg overflow-hidden border border-white/10">
+                    <img
+                      src="https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63ab131c5f0e59720fde6d9c_%203Points.webp"
+                      alt="GPS location mode — building site locations"
+                      className="w-full object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Mode 2 — Virtual Space */}
+            <div className="glass-card p-6 md:p-8 mb-6 hover-lift">
+              <div className="flex flex-col md:flex-row gap-6 items-start">
+                <div className="shrink-0">
+                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                    <span className="text-primary font-bold text-sm">VR</span>
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold text-foreground mb-2">2. Virtual Space</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                    Can't visit Liepāja? Place the reconstructed building anywhere in your environment.
+                    The app uses your phone's camera to scan the space around you and lets you position the 3D structure wherever you like.
+                  </p>
+                  <div className="rounded-lg overflow-hidden border border-white/10">
+                    <img
+                      src="https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63ae9d5f33698b5c30eaa759_Telpa.webp"
+                      alt="Virtual space mode"
+                      className="w-full object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Mode 3 — Image marker */}
+            <div className="glass-card p-6 md:p-8 hover-lift">
+              <div className="flex flex-col md:flex-row gap-6 items-start">
+                <div className="shrink-0">
+                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                    <span className="text-primary font-bold text-sm">IMG</span>
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold text-foreground mb-2">3. Image Recognition (Marker)</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                    Point your camera at a printed or on-screen image marker to instantly trigger the AR reconstruction.
+                    Works both indoors and outdoors without needing GPS or a specific location.
+                  </p>
+                  <div className="rounded-lg overflow-hidden border border-white/10">
+                    <img
+                      src="https://cdn.prod.website-files.com/60e6c9a6b5e67e31c5e15e06/63ae9e5af706a1a0b8e4a4c4_Attels.webp"
+                      alt="Image marker recognition mode"
+                      className="w-full object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Requirements */}
+      <section className="pb-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="glass-card p-6 md:p-8">
+              <h3 className="font-semibold text-foreground mb-4">Device Requirements</h3>
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-muted-foreground">
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                  Camera access required
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                  Location/GPS access required (for location mode)
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                  ARKit support (iOS) or ARCore support (Android)
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                  Best used in daytime with a clear GPS signal
+                </li>
               </ul>
             </div>
+          </div>
+        </div>
+      </section>
 
-            {/* Availability */}
-            <div className="glass-card p-6">
-              <h3 className="font-semibold text-foreground mb-4">Availability</h3>
-              <div className="flex flex-col gap-3">
-                <div className="flex items-center gap-3">
-                  <Smartphone className="w-5 h-5 text-primary shrink-0" />
-                  <div>
-                    <p className="text-foreground text-sm font-medium">iOS & Android</p>
-                    <p className="text-muted-foreground text-xs">Available on both major mobile platforms</p>
+      {/* Team */}
+      <section className="pb-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold mb-2 text-center">
+              Development <span className="text-gradient">Team</span>
+            </h2>
+            <p className="text-muted-foreground text-center mb-10 max-w-xl mx-auto">
+              The people who researched, designed, and built every detail of this experience.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {team.map((member, idx) => (
+                <div key={idx} className="glass-card p-6 hover-lift group text-center">
+                  <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-primary/20 group-hover:border-primary/50 transition-colors">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
+                  <h3 className="font-semibold text-foreground mb-1 group-hover:text-primary transition-colors">
+                    {member.name}
+                  </h3>
+                  <p className="text-primary text-xs mb-3">{member.role}</p>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{member.bio}</p>
                 </div>
-                <p className="text-muted-foreground text-sm leading-relaxed mt-2">
-                  Requires camera and location access. Works best on modern devices with ARKit or ARCore support.
-                </p>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact & Support */}
+      <section className="pb-24">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="glass-card p-6 md:p-8 text-center">
+              <h3 className="font-semibold text-foreground text-lg mb-2">Questions or Support?</h3>
+              <p className="text-muted-foreground text-sm mb-4">
+                Supported by Liepāja Culture Administration. Reach out to the team for any questions about the project.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center text-sm">
+                <a
+                  href="mailto:team@ponder.lv"
+                  className="text-primary hover:underline"
+                >
+                  team@ponder.lv
+                </a>
+                <span className="hidden sm:inline text-muted-foreground">·</span>
+                <a
+                  href="tel:+37128241990"
+                  className="text-primary hover:underline"
+                >
+                  +371 28241990
+                </a>
               </div>
             </div>
           </div>
