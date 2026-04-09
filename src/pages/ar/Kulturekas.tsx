@@ -127,6 +127,47 @@ const Kulturekas = () => {
         </div>
       </section>
 
+      {/* Introduction & Project Goals */}
+      <section className="pb-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Introduction */}
+            <div className="glass-card p-6 md:p-8">
+              <h2 className="text-xl font-bold mb-4">
+                About <span className="text-gradient">the App</span>
+              </h2>
+              <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                3D kultūrēkas enables residents and visitors to explore three historic Liepāja buildings that no longer exist, using augmented reality technology on their smartphones.
+              </p>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                The project was realised with support from Liepāja's Culture Department as part of the initiative <em>"Reconstruction of Liepāja's Historic Architecture in Augmented Reality — Part 3"</em>.
+              </p>
+            </div>
+
+            {/* Project Goals */}
+            <div className="glass-card p-6 md:p-8">
+              <h2 className="text-xl font-bold mb-4">
+                Project <span className="text-gradient">Goals</span>
+              </h2>
+              <ul className="flex flex-col gap-3">
+                {[
+                  "Encourage creative, intellectual, and innovative environments for professional growth among cultural sector representatives in Liepāja.",
+                  "Promote local patriotism and educate residents about the city's architecture and history.",
+                  "Facilitate research, documentation, and accessibility of architectural heritage using modern technology.",
+                  "Develop knowledge that enhances digital literacy, allowing technology to serve as an effective professional tool.",
+                  "Support professional development among architecture specialists and explore AR applications in professional practice.",
+                ].map((goal, idx) => (
+                  <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground">
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-1.5" />
+                    {goal}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* All 3 locations map overview */}
       <section className="pb-16">
         <div className="container mx-auto px-4">
