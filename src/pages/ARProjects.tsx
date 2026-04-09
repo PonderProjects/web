@@ -29,7 +29,7 @@ const arProjects = [
     title: "Wall Art Liepāja",
     category: "Augmented Reality",
     description: "An AR app that animates three large-scale Liepāja murals — point your camera at the artwork and watch it come to life.",
-    tags: ["Unity", "ARKit", "ARCore", "Street Art"],
+    tags: ["Unity", "ARKit", "ARCore", "iOS", "Android", "Street Art"],
     detailPage: "/ar-projects/wall-art",
   },
 ];

@@ -40,7 +40,7 @@ const team = [
   {
     name: "Arturs Vītiņš",
     role: "Programmer & AR Solutions Developer",
-    bio: "Former building construction engineer. Developed the iOS and Android application in Unity and built all augmented reality solutions powering the experience.",
+    bio: "ML engineer. Developed the iOS and Android application in Unity and built all augmented reality solutions powering the experience.",
     image: "/web/images/wallart/team_arturs.jpeg",
   },
 ];

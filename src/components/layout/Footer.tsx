@@ -39,11 +39,19 @@ const Footer = () => {
           {/* Services */}
           <div>
             <h4 className="font-semibold text-foreground mb-4">Services</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>Machine Learning Solutions</li>
-              <li>AR Development</li>
-              <li>AI Consulting</li>
-              <li>Corporate AI Training</li>
+            <ul className="space-y-2 text-sm">
+              {[
+                { label: "AI Solutions", to: "/ai-solutions" },
+                { label: "AI Training", to: "/ai-training" },
+                { label: "Conferences", to: "/conferences" },
+                { label: "AR Projects", to: "/ar-projects" },
+              ].map(({ label, to }) => (
+                <li key={label}>
+                  <Link to={to} className="text-muted-foreground hover:text-primary transition-colors">
+                    {label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
