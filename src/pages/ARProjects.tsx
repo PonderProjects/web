@@ -12,10 +12,11 @@ const arProjects = [
     detailPage: "/ar-projects/kulturekas",
   },
   {
-    title: "AR Project 2",
+    title: "3D Berči ēkas Liepājā",
     category: "Augmented Reality",
-    description: "Temporary placeholder for AR project 2. More details coming soon.",
-    tags: ["Unity", "ARKit", "ARCore"],
+    description: "An AR mobile app that reconstructs three historic Liepāja buildings designed by architect Pauls Makss Berči and his son — see them standing again through your camera.",
+    tags: ["Unity", "ARKit", "ARCore", "iOS", "Android"],
+    detailPage: "/ar-projects/berci",
   },
   {
     title: "AR Project 3",

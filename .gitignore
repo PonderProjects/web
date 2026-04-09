@@ -1,1 +1,6 @@
 CLAUDE.md
+
+# Video assets (large files, added manually per project)
+public/images/berci/*.mp4
+public/images/berci/*.webm
+public/images/berci/*.mov
