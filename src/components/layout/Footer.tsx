@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, MapPin, Phone, Linkedin, Twitter, Github } from "lucide-react";
+import { Mail, MapPin, Phone, Linkedin, Twitter } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -73,7 +73,7 @@ const Footer = () => {
               </li>
             </ul>
             <div className="flex gap-3 mt-4">
-              {[Linkedin, Twitter, Github].map((Icon, idx) => (
+              {[Linkedin, Twitter].map((Icon, idx) => (
                 <a
                   key={idx}
                   href="#"

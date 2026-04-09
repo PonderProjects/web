@@ -1,6 +1,7 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
 import Projects from "./pages/Projects";
 import MITalents from "./pages/MITalents";
@@ -19,6 +20,7 @@ const App = () => (
   <TooltipProvider>
     <Toaster />
     <BrowserRouter basename="/web">
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/projects" element={<Projects />} />
