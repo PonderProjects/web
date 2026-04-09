@@ -19,10 +19,18 @@ const arProjects = [
     detailPage: "/ar-projects/berci",
   },
   {
-    title: "AR Project 3",
+    title: "3D ēkas Liepājā",
     category: "Augmented Reality",
-    description: "Temporary placeholder for AR project 3. More details coming soon.",
-    tags: ["Unity", "ARKit", "ARCore"],
+    description: "An AR mobile app reconstructing three historic Liepāja buildings — the Temporary Government Building, the Town Hall, and the Latvian Society Building — lost to WWII and demolition.",
+    tags: ["Unity", "ARKit", "ARCore", "iOS", "Android"],
+    detailPage: "/ar-projects/ekas",
+  },
+  {
+    title: "Wall Art Liepāja",
+    category: "Augmented Reality",
+    description: "An AR app that animates three large-scale Liepāja murals — point your camera at the artwork and watch it come to life.",
+    tags: ["Unity", "ARKit", "ARCore", "Street Art"],
+    detailPage: "/ar-projects/wall-art",
   },
 ];
 

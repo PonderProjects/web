@@ -12,6 +12,8 @@ import AITraining from "./pages/AITraining";
 import AISolutions from "./pages/AISolutions";
 import Kulturekas from "./pages/ar/Kulturekas";
 import Berci from "./pages/ar/Berci";
+import Ekas from "./pages/ar/Ekas";
+import WallArt from "./pages/ar/WallArt";
 
 const App = () => (
   <TooltipProvider>
@@ -25,6 +27,8 @@ const App = () => (
         <Route path="/ar-projects" element={<ARProjects />} />
         <Route path="/ar-projects/kulturekas" element={<Kulturekas />} />
         <Route path="/ar-projects/berci" element={<Berci />} />
+        <Route path="/ar-projects/ekas" element={<Ekas />} />
+        <Route path="/ar-projects/wall-art" element={<WallArt />} />
         <Route path="/conferences" element={<Conferences />} />
         <Route path="/ai-training" element={<AITraining />} />
         <Route path="/ai-solutions" element={<AISolutions />} />
