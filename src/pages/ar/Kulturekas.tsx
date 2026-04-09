@@ -414,34 +414,6 @@ const Kulturekas = () => {
         </div>
       </section>
 
-      {/* Contact & Support */}
-      <section className="pb-24">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="glass-card p-6 md:p-8 text-center">
-              <h3 className="font-semibold text-foreground text-lg mb-2">Questions or Support?</h3>
-              <p className="text-muted-foreground text-sm mb-4">
-                Supported by Liepāja Culture Administration. Reach out to the team for any questions about the project.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-3 justify-center text-sm">
-                <a
-                  href="mailto:team@ponder.lv"
-                  className="text-primary hover:underline"
-                >
-                  team@ponder.lv
-                </a>
-                <span className="hidden sm:inline text-muted-foreground">·</span>
-                <a
-                  href="tel:+37128241990"
-                  className="text-primary hover:underline"
-                >
-                  +371 28241990
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </Layout>
   );
 };
